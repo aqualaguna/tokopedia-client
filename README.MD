@@ -1,4 +1,4 @@
-# Nodejs Shopee Open Api Client
+# Nodejs Tokopedia Open Api Client
 
 this project started as my goal to use tokopedia api easily. this project has not fully tested yet. but basic functions still function perfectly.
 
@@ -51,7 +51,7 @@ for more detail look at: https://developer.tokopedia.com/openapi/guide/
 
 ## Author
 
-Made with ♡ ♥💕❤ By Aqualaguna (ricardosentinel7@gmail.com).
+Made with ♡♥💕❤ By Aqualaguna (ricardosentinel7@gmail.com).
 
 ## License
 
