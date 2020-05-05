@@ -1,0 +1,41 @@
+{
+  "name": "tokopedia-client",
+  "version": "1.0.0",
+  "description": "Client For Tokopedia API",
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "test:docker": "docker-compose up -d && jest --runInBand",
+    "test": "jest",
+    "test-watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqualaguna/tokopedia-client.git"
+  },
+  "keywords": [
+    "api",
+    "client",
+    "tokopedia"
+  ],
+  "author": "ricardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aqualaguna/tokopedia-client/issues"
+  },
+  "homepage": "https://github.com/aqualaguna/tokopedia-client#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.2",
+    "jest": "^25.5.0",
+    "ts-jest": "^25.4.0",
+    "ts-node": "^8.9.1"
+  }
+}
