@@ -20,6 +20,7 @@ let client = new TokopediaClient({
   client_id: 'YOUR CLIENT ID',
   client_secret: 'YOUR CLIENT SECRET'
 })
+await client.authenticate();
 let result = await client.product.getProductInfo(undefined, [
   'https://www.tokopedia.com/shop-api9/testing-flash-sale-1'
 ]);
