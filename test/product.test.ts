@@ -258,7 +258,7 @@ describe('Product Test', () => {
   it('should success check status', async () => {
     expect.assertions(0);
     try {
-      let result = await client.product.checkStatus(8212734, 1248005);
+      let result = await client.product.checkStatus(8212734, 1352080);
       console.log(JSON.stringify(result, null, '\t'));
     } catch(e) {
       console.log(e)
@@ -580,7 +580,7 @@ describe('Product Test', () => {
       let result = await client.product.updateProduct({
         shop_id,
         products: [
-         product
+         producttemp
         ]
       });
       // check result
