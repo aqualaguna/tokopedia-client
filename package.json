@@ -1,6 +1,6 @@
 {
   "name": "tokopedia-client",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Client For Tokopedia API",
   "main": "lib/index",
   "types": "lib/index",

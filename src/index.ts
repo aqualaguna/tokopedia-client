@@ -8,6 +8,8 @@ import OrderModule from './modules/order';
 import ShopModule from './modules/shop';
 import StatisticModule from './modules/statistic';
 import WebhookModule from './modules/webhook';
+import UnknownError from './error/response/UnknownError';
+import UnauthorizedError from './error/response/UnauthorizedError';
 
 export interface AuthenticateResponse {
     access_token: string,
@@ -75,13 +77,17 @@ export default class TokopediaClient {
         } else {
             base_url = 'https://accounts.tokopedia.com';
         }
-        
+        console.log()
         let result = await this.client.post( base_url + '/token?grant_type=client_credentials', {}, {
             auth: {
                 username: this.config.client_id,
                 password: this.config.client_secret
             }
         }).then(d => {
+            let data = d.data;
+            if (data.error) {
+                throw new UnauthorizedError(`${data.error}: ${data.error_description}`)
+            }
             this.token = d.data;
             this.initialize();
             return d.data;
