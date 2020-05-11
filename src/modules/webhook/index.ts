@@ -13,7 +13,7 @@ export default class WebhookModule extends BaseModule {
     let url = `/v1/fs/${this.fs_id}/register`;
     return this.client.post(url, {
       ...request,
-      fs_id: this.fs_id
+      fs_id: Number(this.fs_id)
     }, {
       headers: {
         Authorization: `Bearer ${this.token.access_token}`
