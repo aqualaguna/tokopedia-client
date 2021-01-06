@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/aqualaguna/tokopedia-client#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
